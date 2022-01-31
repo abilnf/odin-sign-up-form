@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Dokdo&display=swap");
 
+* {
+  box-sizing: border-box;
+}
+
 :root {
   font-family: "Roboto", sans-serif;
 }
@@ -87,6 +91,32 @@ label {
   color: #555;
 }
 
+.login {
+  margin-top: 32px;
+  color: #444;
+  font-weight: bold;
+}
+
+.login a {
+  color: #596d48;
+  text-decoration: none;
+}
+
+.error {
+  margin: 4px 0 0 0;
+  font-size: 0.8rem;
+  color: red;
+}
+
+input:invalid {
+  border: 1px solid red;
+}
+
+input:focus {
+  border: 2px solid lightblue;
+  box-shadow: 3px 3px 5px #00000033;
+}
+
 .content button {
   align-self: start;
   margin-left: 32px;
@@ -97,15 +127,15 @@ label {
   border-radius: 8px;
   color: white;
   font-size: 1rem;
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
 }
 
-.login {
-  margin-top: 32px;
-  color: #444;
-  font-weight: bold;
+.content button:hover {
+  box-shadow: 0 0 4px black;
+  background: #88a56e;
 }
 
-.login a {
-  color: #596d48;
-  text-decoration: none;
+.content button:active {
+  background: #425035;
 }
